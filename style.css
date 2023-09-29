@@ -1,0 +1,19 @@
+body {
+    background-image: url("assets/twice.jpg");
+    background-size: cover;
+}
+p {
+    color:crimson;
+}
+h1 {
+    color:rgb(14, 26, 252);
+}
+.wowza {
+    color:darkgreen;
+}
+#dangg {
+    color:blueviolet;
+}
+#bubby {
+    color:rgb(128, 86, 13);
+}
