@@ -1,17 +1,21 @@
 /* Question 0. Import a font and make all text in the body using that font. Check the homework instructions for more information!*/
 /* Set all text in the body to be a certain color (whatever color you choose!)*/
 /* Center all text in the body. Check out the homework spec for help.*/
-
 body {
+    font-family: 'Fira Sans', sans-serif;
     margin: 50px auto;
     max-width: 1200px;
-    /* YOUR CODE HERE */
+    text-align: center;
+    color:purple;
 }
 
-/* Question 1: Add a border, border radius, box shadow, or whatever other styling you'd like to your image! */
 img {
-    width: 175px;
-    /* YOUR CODE HERE */
+    width: 200px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: goldenrod;
+    border-radius: 40px;
+    box-shadow: 7px 7px 0.3em black;
 }
 
 h1 {
@@ -19,63 +23,66 @@ h1 {
     transition: ease-in-out 0.5s;
 }
 
-/* Question 2. Select the h1 tag and add a hover effect! You can change the background-color, color, opacity, or anything you want.*/
-
-/* YOUR CODE HERE */
-
-
+h1:hover {
+    background-color: aquamarine;
+}
 
 
+#education {
+    background-color: tomato;
+}
+#experience {
+    background-color: bisque;
+}
+#projects {
+    background-color: pink;
+}
+#contact {
+    background-color: yellow;
+}
 
-/* Question 3. Add different background colors for all the different sections (Education, Experience, etc.) by selecting them via ids. */
 
-/* YOUR CODE HERE */
-
-
-
-
-/* Question 4. Add margin, padding, and borders to the section-wrapper class! */
 
 .section-wrapper {
     background-color: #a5d2ee;
-    /*YOUR CODE HERE*/
+    border: 10px solid rgb(159, 25, 132);
+    padding: 20px;
+    margin: 40px;
 }
 
 
 
 /* Experience Section */
 
-/* Question 5a. This is a little tougher! Use CSS Flexbox to display your experiences as shown in the diagram.
- Hint: Check the homework spec for some help!*/
-
 .experience-wrapper {
-    display: ;/* YOUR CODE HERE */
-    gap: ;/*YOUR CODE HERE*/
-    justify-content: ;/*YOUR CODE HERE*/
+    display: flex ;
+    gap: 3% ;
+    justify-content:center ;
 }
 
-/* Question 5b. Add a background color to the experience-list-item class.*/
 
 .experience-list-item {
-    border: 4px solid #1d3557;
+    border: 4px solid #1a509c;
     text-align: left;
     width: 250px;
-    padding: 10px 20px;
-    border-radius: 15px;
-    /*YOUR CODE HERE*/
+    padding: 5px 10px;
+    border-radius: 30px;
+    font-family: 'Fira Sans', sans-serif;
+    background-color: azure;
 
     /* Side note: the transition attribute makes effects look smoother! 
     This means the hover effect will slowly kick in for 0.2s. */
-    transition: ease-in-out 0.2s;
+    transition: ease-in-out 0.5s;
 }
 
 
 
-/* Question 5c. Let's take a break! Add a hover effect to each experience-list-item div. 
-Experiment with border, border-radius, background-color, or whatever you want!*/
 
 .experience-list-item:hover {
-    /* YOUR CODE HERE */
+    background-image: url("../assets/twice.jpg");
+    /* background-color: rgb(227, 102, 164); */
+    background-size: cover;
+    background-position: center;
 }
 
 
@@ -85,8 +92,22 @@ Experiment with border, border-radius, background-color, or whatever you want!*/
 
 /* Question 6. Use CSS Flexbox and hover effects for the Projects Section, just as you did for the Experience Section! */
 
-/*YOUR CODE HERE*/
+.project-wrapper {
+    display: flex;
+    gap: 3%;
+    justify-content: center;
+}
 
+.projecth3 { /* How to bold text?? */
+    color: black;
+}
+
+.project-list-item {
+    border: 7px solid rgb(44, 14, 176); 
+    padding: 10px 20px;
+    width: 320px;
+    background-color:rgb(236, 231, 153);
+}
 
 
 
@@ -96,6 +117,19 @@ Experiment with border, border-radius, background-color, or whatever you want!*/
 
 /* Question 7. Make your link look like the one shown in the homework spec!*/
 
+.button1 {
+    text-decoration: none;
+    color:white;
+    background-color: rgb(42, 65, 167);
+    border-radius: 24px;
+    padding: 8px 14px;
+    width: 69px;
+    box-shadow: 3px 3px 0.2em black;
+}
 a {
-    /*YOUR CODE HERE*/
+    text-decoration: none;
+    color:white;
+}
+#contacth {
+    color:black;
 }
