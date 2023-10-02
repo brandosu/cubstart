@@ -1,6 +1,7 @@
 body {
     background-image: url("assets/twice.jpg");
     background-size: cover;
+    background-position: center;
 }
 p {
     color:crimson;
