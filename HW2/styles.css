@@ -1,0 +1,143 @@
+/* Question 0. Import a font and make all text in the body using that font. Check the homework instructions for more information!*/
+/* Set all text in the body to be a certain color (whatever color you choose!)*/
+/* Center all text in the body. Check out the homework spec for help.*/
+body {
+    font-family: 'Fira Sans', sans-serif;
+    margin: 50px auto;
+    max-width: 1200px;
+    text-align: center;
+    color:purple;
+}
+body:hover { /* Sorry I was just having fun w/ it :) */
+    background-image: url("./assets/twice\ copy.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+img {
+    width: 200px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: goldenrod;
+    border-radius: 40px;
+    box-shadow: 7px 7px 0.3em black;
+}
+
+h1 {
+    font-size: 45px;
+    transition: ease-in-out 0.5s;
+}
+
+h1:hover {
+    background-image: url("./assets/twice\ copy.jpg");
+    background-size: cover;
+    background-position: center;
+    /* background-color: aquamarine; */
+}
+
+
+#education {
+    background-color: tomato;
+}
+#experience {
+    background-color: bisque;
+}
+#projects {
+    background-color: pink;
+}
+#contact {
+    background-color: yellow;
+}
+
+
+
+.section-wrapper {
+    background-color: #a5d2ee;
+    border: 10px solid rgb(159, 25, 132);
+    padding: 20px;
+    margin: 40px;
+}
+
+
+
+/* Experience Section */
+
+.experience-wrapper {
+    display: flex ;
+    gap: 3% ;
+    justify-content:center ;
+}
+
+
+.experience-list-item {
+    border: 4px solid #1a509c;
+    text-align: left;
+    width: 250px;
+    padding: 5px 10px;
+    border-radius: 30px;
+    font-family: 'Fira Sans', sans-serif;
+    background-color: azure;
+
+    /* Side note: the transition attribute makes effects look smoother! 
+    This means the hover effect will slowly kick in for 0.2s. */
+    transition: ease-in-out 0.5s;
+}
+
+
+
+
+.experience-list-item:hover {
+    background-image: url("./assets/twice\ copy.jpg");
+    /* background-color: rgb(227, 102, 164); */
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+/* Projects Section */
+
+/* Question 6. Use CSS Flexbox and hover effects for the Projects Section, just as you did for the Experience Section! */
+
+.project-wrapper {
+    display: flex;
+    gap: 3%;
+    justify-content: center;
+}
+
+.projecth3 { /* How to bold header text?? */
+    color: black;
+}
+
+.project-list-item {
+    border: 7px solid rgb(44, 14, 176); 
+    padding: 10px 20px;
+    width: 320px;
+    background-color:rgb(236, 231, 153);
+}
+
+
+
+
+
+/* Contact Section */
+
+/* Question 7. Make your link look like the one shown in the homework spec!*/
+
+.button1 {
+    text-decoration: none;
+    color:white;
+    background-color: rgb(42, 65, 167);
+    border-radius: 24px;
+    padding: 8px 14px;
+    width: 69px;
+    box-shadow: 3px 3px 0.2em black;
+}
+a {
+    text-decoration: none;
+    color:white;
+}
+#contacth {
+    color:black;
+}
