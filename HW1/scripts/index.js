@@ -1,4 +1,4 @@
-const video = document.getElementById("video");
+const video = document.getElementById("turtle");
 const body = document.getElementById("body");
 
 video.addEventListener("click", () => {
