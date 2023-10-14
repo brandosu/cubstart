@@ -1,4 +1,3 @@
-// CLUE #0: See more info in the homework spec.
 apiKey = "2679c9280fc4a08fa22889a7940cd14d";
 
 geocodingUrl = "http://api.openweathermap.org/geo/1.0/direct?q="; // This is beginning of the API call we use to convert city names to coordinates!
@@ -22,6 +21,7 @@ submitButton.addEventListener("click", function () {
 // This function takes in a city name (that the user inputs), and gets the latitude and longitude
 // of that city. This is important because our second API call, the one that actually gets the weather,
 // requires a latitude and longitude coordinate pair.
+/*
 async function getLatLon(city) {
 
   // Let's create the API url. (CLUE #2)
@@ -37,6 +37,7 @@ async function getLatLon(city) {
     "lon": data[0]["lon"]
   }
 }
+*/
 
 //This function makes a GET request to retrieve weather data at a specific latitude and longitude.
 // (CLUE #5)
@@ -52,20 +53,33 @@ async function getWeather(lat, lon) {
   }
 }
 
+async function getWeatherByName(city) {
+  let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
+  let response = await fetch(url)
+  let data = await response.json()
+
+  return {
+    "main": data["weather"][0]["main"],
+    "description": data["weather"][0]["description"]
+  }
+}
+
 // This function gets the weather using the functions you wrote above and displays it in the HTML.
 async function setWeatherDescription(city) {
   // This line calls getLatLon on the city name provided to find the latitude and longitude of that city.
-  let coordinateData = await getLatLon(city)
+  // let coordinateData = await getLatLon(city)
 
   // Extract the lat and lon from coordinateData. (CLUE #6)
+  
+  /*
   const lat = coordinateData["lat"]
   const lon = coordinateData["lon"]
 
 
   let weatherData = await getWeather(lat, lon)
-  
+  */
+  let weatherData = await getWeatherByName(city)
   // Same thing here, but we want to set mainWeather and weatherDescription's innerHTML to the relevant values in weatherData.
-  // (CLUE #7)
   mainWeather.innerHTML = "🐻 " + weatherData["main"] + " 🐻"
   weatherDescription.innerHTML = "✨ " + weatherData["description"] + " ✨"
 }
